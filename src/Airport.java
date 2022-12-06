@@ -213,6 +213,8 @@ public class Airport {
         double RHO   = totalBusy/(4*clock);
         double AVGR  = sumResponseTime/TOTAL_CUSTOMERS;
         double PC4   = ((double)longService)/TOTAL_CUSTOMERS;
+        double AVG_WAITING = (sumResponseTime-totalBusy)/TOTAL_CUSTOMERS;
+        double AVG_SERVE = totalBusy/TOTAL_CUSTOMERS;
 
         System.out.println("AIRPORT CHECK IN SYSTEM SIMULATION - GROCERY STORE CHECKOUT COUNTER ");
         System.out.println("\tNUMBER OF CUSTOMERS SERVED                     " + TOTAL_CUSTOMERS);
@@ -222,7 +224,9 @@ public class Airport {
         System.out.println("\tMAXIMUM LINE LENGTH FOR SECURITY CHECK LINE    " + maxSecCheckLength);
         System.out.println("\tAVERAGE RESPONSE TIME                          " + AVGR + "  MINUTES");
         System.out.println("\tPROPORTION WHO SPEND FOUR ");
-        System.out.println("\tMINUTES OR MORE IN SYSTEM                     " + PC4);
+        System.out.println("\tMINUTES OR MORE IN SYSTEM                      " + PC4);
+        System.out.println("\tAVERAGE WAITING TIME                           " + AVG_WAITING + "  MINUTES");
+        System.out.println("\tAVERAGE SERVE TIME                             " + AVG_SERVE + "  MINUTES");
         System.out.println("\tSIMULATION RUNLENGTH                           " + clock + " MINUTES" );
     }
 }
